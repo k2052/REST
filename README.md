@@ -1,5 +1,5 @@
-A refactor of the rest client [https://github.com/touv/rest_client](https://github.com/touv/rest_client) by Nicolas
-Thouvenin and Stéphane Gully.
+A cleaned up, english documented and slightly re-factored version of
+[https://github.com/touv/rest_client](https://github.com/touv/rest_client) by Nicolas Thouvenin and Stéphane Gully.
   
 # License  
 
