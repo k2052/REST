@@ -95,7 +95,14 @@ class REST_Response
    *
    * @var string
    **/
-  var $error = '';  
+  var $error = '';        
+  
+  /**
+   * Error
+   *
+   * @var constant
+   **/
+  var $errno = CURLE_OK;
   
   /**
    * Constructor.
