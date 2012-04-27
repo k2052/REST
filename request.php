@@ -275,8 +275,8 @@ class REST_Request
     );
     
     $options[CURLOPT_URL]           = $this->protocol.'://'.$this->host.':'.$this->port.$this->url;
-    $options[CURLOPT_CUSTOMREQUEST] = $this->method;    
-
+    $options[CURLOPT_CUSTOMREQUEST] = $this->method;        
+    
     if (!is_null($this->body) and $this->body !== '')
       $options[CURLOPT_POSTFIELDS] = $this->body;
     

@@ -52,8 +52,8 @@ class REST_Client_Sync extends REST_Client
    */
   public function __construct($options = array())
   {
-    $this->options = $options;
-    $this->handle = curl_init(); 
+    $this->options = $options;  
+    $this->handle = curl_init();
   }     
   
 // ------------------------------------------------------------------------    
@@ -63,8 +63,8 @@ class REST_Client_Sync extends REST_Client
    *
    */
   public function __destruct()
-  {
-    curl_close($this->handle);
+  {            
+    @curl_close($this->handle);
   }    
    
 // ------------------------------------------------------------------------    
@@ -147,10 +147,10 @@ class REST_Client_Sync extends REST_Client
     }
   
     // send the request and create the response object
-    ++$this->requests;
+    ++$this->requests;   
     $response = new REST_Response(curl_exec($this->handle), curl_errno($this->handle), curl_error($this->handle));   
     
-    if (!$response->isError()) 
+    if(!$response->isError()) 
     {
       foreach(REST_Response::$properties as $name => $const) {
         $response->$name = curl_getinfo($this->handle, $const);

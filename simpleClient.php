@@ -45,7 +45,7 @@ class REST_SimpleClient
     $this->request->port = $port;
     $this->request->setCurlOptions($options);  
     
-    $this->client = REST_Client::factory('sync',  array('verbose' => false));
+    $this->client = REST_Client::factory('sync',  array('verbose' => true));
   }  
   
 // ------------------------------------------------------------------------
